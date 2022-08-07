@@ -1,0 +1,44 @@
+type User @model @auth(
+  rules: [
+    {allow: owner}
+    {allow: private, operations: [read, update]},
+    {allow: public, operations: [read]},
+  ]
+  ) {
+  id: ID!
+  username: String!
+  Posts: [Post] @hasMany(indexName: "byUser", fields: ["id"])
+  Likes: [Post] @manyToMany(relationName: "UserLikes")
+}
+
+
+type Post @model @auth(
+  rules: [
+    {allow: owner}
+    {allow: private, operations: [read, update]},
+    {allow: public, operations: [read]},
+  ]
+  ) {
+  id: ID!
+  title: String!
+  description: String
+  image: String!
+  userID: ID! @index(name: "byUser")
+  Likes: [User] @manyToMany(relationName: "UserLikes")
+}
+
+
+# type Post @model @auth(
+#   rules: [
+#     {allow: public},
+#   ]
+#   ) {
+#   id: ID!
+#   title: String!
+#   description: String
+#   image: String!
+#   userID: ID! @index(name: "byUser")
+#   Likes: [User] @manyToMany(relationName: "UserLikes")
+# }
+
+ 

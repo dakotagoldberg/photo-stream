@@ -1,0 +1,16 @@
+{
+  "resourceName": "photostreamstorage",
+  "policyUUID": "63b4decf",
+  "bucketName": "photostream8d1db34174934c069ce8b0714094f596",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

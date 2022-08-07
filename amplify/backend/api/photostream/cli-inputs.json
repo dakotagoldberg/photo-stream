@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "photostream",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/Users/dakotagoldberg/playground/photo_stream/amplify/backend/api/photostream/schema.graphql",
+    "defaultAuthType": {
+      "mode": "AWS_IAM"
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "API_KEY",
+        "expirationTime": 30,
+        "apiKeyExpirationDate": "2022-08-24T02:20:25.264Z",
+        "keyDescription": ""
+      },
+      {
+        "mode": "AMAZON_COGNITO_USER_POOLS",
+        "cognitoUserPoolId": "authphotostream35074438"
+      }
+    ],
+    "conflictResolution": {
+      "defaultResolutionStrategy": {
+        "type": "AUTOMERGE"
+      }
+    }
+  }
+}

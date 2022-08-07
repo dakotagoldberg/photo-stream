@@ -1,0 +1,12 @@
+{
+  "AppSyncApiName": "photostream",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authphotostream35074438",
+      "Outputs.UserPoolId"
+    ]
+  },
+  "AuthModeLastUpdated": "2022-07-25T02:20:26.332Z"
+}
